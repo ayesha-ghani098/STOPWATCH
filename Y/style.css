@@ -1,0 +1,198 @@
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background-color: black; */
+    /* opacity: 0.5; */
+    /* z-index: 1; */
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+}
+
+#center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#center1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.base-timer {
+    height: 310px;
+    width: 310px;
+}
+
+::placeholder {
+    color: white;
+}
+
+#set {
+    width: 150px;
+    height: 35px;
+    margin-left: 90px;
+    box-shadow: palevioletred;
+}
+
+
+/* Removes SVG styling that would hide the time label */
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+
+/* The SVG path that displays the timer's progress */
+
+.base-timer__path-elapsed {
+    stroke-width: 6px;
+    stroke: rgb(197, 21, 74);
+}
+
+p {
+    width: 80px;
+    height: 20px;
+    font-size: 10px;
+}
+
+#flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#flex-container>.flex-item {
+    flex: auto;
+    background-color: black;
+}
+
+p {
+    display: inline;
+}
+
+
+/* buttons */
+
+button {
+    width: 80px;
+    height: 50px;
+    font-size: 20px !important;
+    color: white;
+    background-image: linear-gradient(to right top, #e32536, #ce213a, #b91f3d, #a41f3d, #8e1f3c);
+    border: none;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+
+/*
+####################################################
+I N P U T
+####################################################
+*/
+
+input {
+    background-image: linear-gradient(to right top, #e32536, #ce213a, #b91f3d, #a41f3d, #8e1f3c);
+    width: 60px;
+    height: 23px;
+    border: none;
+    padding: 6px;
+    font-size: 20px;
+}
+
+input:hover {
+    opacity: 0.6;
+}
+
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 700px) {
+    #flex-container>.flex-item {
+        flex: auto;
+        background-color: black;
+        margin-bottom: 30px;
+    }
+    #center {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    #flex-container>#flex2 {
+        margin-top: 30px;
+    }
+    input {
+        width: 50px;
+        font-size: 17px;
+    }
+    #set {
+        font-size: 13px;
+        margin-bottom: 100px;
+    }
+    ;
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+
+@media (min-width: 1200px) {
+    #flex-container>.flex-item {
+        flex: auto;
+        justify-content: space-around;
+        background-color: black;
+    }
+    #flex-container>#flex {
+        margin-left: 10px;
+    }
+    #flex-container>#flex {
+        margin-right: 10px;
+    }
+    #flex-container {
+        padding-left: 300px;
+        padding-right: 300px;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+}
+
+;
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media (max-width: 375px) {
+    #flex-container>.flex-item {
+        flex: auto;
+    }
+    #set {
+        font-size: 13px
+    }
+    ;
+}

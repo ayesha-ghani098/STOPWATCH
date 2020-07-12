@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch Web Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+</head>
+
+<body>
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+    <source src="./images/Black - 13495.mp4" type="video/mp4">
+  </video>
+
+    <!-- Stopwatch -->
+    <div id="flex-container" class="overlay">
+        <div class="flex-item" id="flex">
+            <div style="text-align: center; background-color: rgb(146, 9, 54); margin-right: 10px;">
+                <h1>Stop Watch</h1>
+            </div>
+            <div class="base-timer" id="center">
+                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="35" />
+            <foreignObject x="19" y="38" width="60" height="20">
+                <p class="box" id="min">0 </p><p  style=" margin-top: 16%;">:</p>
+                <p class="box" id="sec">0 </p><p  style=" margin-top: 16%;">:</p>
+                <p class="box" id="msec">0</p>
+              </foreignObject>
+          </g>
+        </svg>
+            </div>
+            <div style="text-align: center;">
+                <button id="start" onclick="Start()">Start</button>&nbsp;&nbsp;
+                <button id="stop" onclick="Stop()">Stop</button>&nbsp;&nbsp;
+                <button id="reset" onclick="Reset()">Reset</button>&nbsp;&nbsp;
+            </div>
+        </div>
+        <!-- Timer -->
+        <div class="flex-item" id="flex2">
+            <div style="text-align: center; background-color: rgb(146, 9, 54);">
+                <h1>Timer</h1>
+            </div>
+            <div class="base-timer" id="center1">
+                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <g class="base-timer__circle">
+            <circle class="base-timer__path-elapsed" cx="50" cy="50" r="35" />
+            <foreignObject x="19" y="38" width="60" height="20">
+                <p class="box" id="minn">0 </p><p  style=" margin-top: 16%;">:</p>
+                <p class="box" id="secc">0 </p><p  style=" margin-top: 16%;">:</p>
+                <p class="box" id="msecc">0</p>
+              </foreignObject>
+          </g>
+        </svg>
+                <div style="text-align: center;">
+                    <h3 style="margin-top: -20px; margin-bottom: -10px;">Set Intervals</h3><br>
+                    <div id="h5" style="display: inline;">
+                        <h5 style="display: inline;">Start After</h5>
+                    </div>
+                    <input placeholder="min" name="minute" id="a">
+                    <input placeholder="sec" name="second" id="b">
+                    <input placeholder="msec" name="milisecond" id="c"><br><br>
+                    <div id="h5" style="display: inline;">
+                        <h5 style="display: inline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End At</h5>
+                    </div>
+                    <input placeholder="min" name="minute" id="a1">
+                    <input placeholder="sec" name="second" id="b2">
+                    <input placeholder="msec" name="milisecond" id="c3"><br><br>
+                    <img onclick="Refresh()" width="40px" height="40px" src="./images/refresh.png" alt="">
+                    <button id="set" onclick="setint(document.getElementById('a').value,document.getElementById('b').value,document.getElementById('c').value,document.getElementById('a1').value,document.getElementById('b2').value,document.getElementById('c3').value)">Click Here</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Javascript File Linked -->
+    <script src="./app.js"></script>
+</body>
+
+</html>
