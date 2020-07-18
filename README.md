@@ -1,5 +1,5 @@
 # Stopwatch_app
-Stopwatch and Timer 
+Stopwatch and Timer Using JavaScript 
 # Timer
 You can define that after what time timer should start and end .
 #
